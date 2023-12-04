@@ -1,0 +1,40 @@
+<div >
+    <button class="btn btn-success"  (click)="loadUserDetails()">User Details</button>  
+    <label for="searchId">Search by ID:</label>
+    <input type="text" id="searchId" [(ngModel)]="searchId" />
+    <button class="btn btn-success" (click)="searchUser()">Search</button>
+   
+  </div>
+  
+  
+  <div *ngIf="showTable">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Website</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredUserList; let i = index">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.website }}</td>
+          <td>
+        
+            <button class="btn btn-danger btn-sm ml-2" (click)="deleteUser(user.id)">Delete </button>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

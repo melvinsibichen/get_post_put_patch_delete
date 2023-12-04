@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    height: 100vh; // Set container height to 100% of the viewport height
+  }
+  
+  .leftside {
+    flex: 0 0 60%;
+    padding: 20px;
+   
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; // Align form elements vertically
+    max-width: 400px; // Set a maximum width for the form
+    margin: 0 auto; // Center the form within the leftside container
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 100%; // Make input fields take up 100% of the parent width
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  .rightside {
+    flex: 0 0 40%;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    background-color: #e0e0e0;
+    overflow-y: auto; // Add scroll bar if content overflows
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  pre {
+    white-space: pre-wrap; // Preserve whitespace in pre tag
+  }
+  
+  // Add any additional styles as needed
+  
